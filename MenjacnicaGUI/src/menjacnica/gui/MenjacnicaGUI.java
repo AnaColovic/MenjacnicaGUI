@@ -160,6 +160,11 @@ public class MenjacnicaGUI extends JFrame {
 	private JButton getBtnDodajKurs() {
 		if (btnDodajKurs == null) {
 			btnDodajKurs = new JButton("Dodaj kurs");
+			btnDodajKurs.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					GUIKontroler.napraviDodajKurs();
+				}
+			});
 			btnDodajKurs.setBounds(10, 5, 120, 23);
 		}
 		return btnDodajKurs;
@@ -227,14 +232,13 @@ public class MenjacnicaGUI extends JFrame {
 	}
 	
 	public void ispis(String ispis){
-		textArea.setText(textArea.getText()+" "+ispis);
+		textArea.setText(textArea.getText()+"\n"+ispis);
 	}
 	
 	private JPopupMenu getPopupMenu() {
 		if (popupMenu == null) {
 			popupMenu = new JPopupMenu();
-			popupMenu.setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
-			popupMenu.setPopupSize(new Dimension(0, 0));
+			popupMenu.setVisible(true);
 			popupMenu.add(getMnDodajKurs());
 			popupMenu.add(getMnObrisiKurs());
 			popupMenu.add(getMnIzvrsiZamenu());
@@ -261,6 +265,11 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenu getMnDodajKurs() {
 		if (mnDodajKurs == null) {
 			mnDodajKurs = new JMenu("Dodaj kurs");
+			mnDodajKurs.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					GUIKontroler.napraviDodajKurs();
+				}
+			});
 		}
 		return mnDodajKurs;
 	}

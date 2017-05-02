@@ -49,4 +49,13 @@ import menjacnica.gui.MenjacnicaGUI;
 		}
 	}
 	
+	public static void napraviDodajKurs(){
+		DodajKursGUI kurs = new DodajKursGUI();
+		kurs.setVisible(true);
+	}
+	
+	public static void ispisi(String poruka){
+		menjacnicaGUI.ispis(poruka);
+	}
+	
 	}
