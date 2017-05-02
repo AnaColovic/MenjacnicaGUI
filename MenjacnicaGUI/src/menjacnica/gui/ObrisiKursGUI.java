@@ -177,7 +177,7 @@ public class ObrisiKursGUI extends JFrame {
 			btnObrisi = new JButton("Obrisi");
 			btnObrisi.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-				String poruka = "Sifra: " + sifra.getText() +  " Naziv: " + naziv.getText() + " Prodajni kurs: " +
+				String poruka = "Obrisan kurs: " + "\n" + "Sifra: " + sifra.getText() +  " Naziv: " + naziv.getText() + " Prodajni kurs: " +
 					prodajni.getText() + " Kupovni kurs: " + kupovni.getText() + " Srednji kurs: " + 
 					srednji.getText() + " Skraceni naziv: " + skraceniNaziv.getText();
 				GUIKontroler.ispisi(poruka);

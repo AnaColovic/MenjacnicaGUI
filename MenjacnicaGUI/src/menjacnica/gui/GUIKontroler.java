@@ -1,8 +1,10 @@
 package menjacnica.gui;
 	import java.awt.EventQueue;
-	import java.io.File;
+import java.awt.JobAttributes;
+import java.io.File;
 
-	import javax.swing.JFileChooser;
+import javax.print.attribute.standard.JobKOctetsProcessed;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 import menjacnica.gui.MenjacnicaGUI;
@@ -28,7 +30,7 @@ import menjacnica.gui.MenjacnicaGUI;
 			int vrednost = fc.showOpenDialog(menjacnicaGUI.getContentPane());
 			if(vrednost==JFileChooser.APPROVE_OPTION){
 				File fajl = fc.getSelectedFile();
-				menjacnicaGUI.ispis("Ucitan fajl: " + fajl.getName() + " gde: " + fajl.getAbsolutePath());
+				menjacnicaGUI.ispis("Ucitan fajl: " + fajl.getAbsolutePath());
 			}
 		}
 	
@@ -37,7 +39,7 @@ import menjacnica.gui.MenjacnicaGUI;
 		int vrednost = fc.showSaveDialog(menjacnicaGUI.getContentPane());
 		if(vrednost == JFileChooser.APPROVE_OPTION){
 			File fajl = fc.getSelectedFile();
-			menjacnicaGUI.ispis("Sacuvan fajl: " + fajl.getName() + " gde: " + fajl.getAbsolutePath());
+			menjacnicaGUI.ispis("Sacuvan fajl: " + fajl.getAbsolutePath());
 		}
 	}
 	
@@ -63,4 +65,13 @@ import menjacnica.gui.MenjacnicaGUI;
 		obrisi.setVisible(true);
 	}
 	
+	public static void podaciOAutoru(){
+		String poruka = "Ime: Ana Colovic" + "\n" + "Fakultet: Fakultet organizacionih nauka " + "\n" + "Smer: Informacioni sistemi i tehnologije";
+		JOptionPane.showMessageDialog(menjacnicaGUI.getContentPane(), poruka, "Podaci o autoru", 1);
+	}
+	
+	public static void napraviIzvrsiZamenu(){
+		IzvrsiZamenuGUI zamena = new IzvrsiZamenuGUI();
+		zamena.setVisible(true);
+	}
 	}
