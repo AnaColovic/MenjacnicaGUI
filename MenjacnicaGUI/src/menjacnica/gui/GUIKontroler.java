@@ -58,4 +58,9 @@ import menjacnica.gui.MenjacnicaGUI;
 		menjacnicaGUI.ispis(poruka);
 	}
 	
+	public static void napraviObrisiKurs(){
+		ObrisiKursGUI obrisi = new ObrisiKursGUI();
+		obrisi.setVisible(true);
+	}
+	
 	}
