@@ -52,6 +52,7 @@ public class ObrisiKursGUI extends JFrame {
 	 * Create the frame.
 	 */
 	public ObrisiKursGUI() {
+		setResizable(false);
 		setTitle("Obrisi kurs");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 350, 300);

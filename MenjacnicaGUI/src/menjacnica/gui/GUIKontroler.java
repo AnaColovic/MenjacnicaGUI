@@ -67,7 +67,7 @@ import menjacnica.gui.MenjacnicaGUI;
 	
 	public static void podaciOAutoru(){
 		String poruka = "Ime: Ana Colovic" + "\n" + "Fakultet: Fakultet organizacionih nauka " + "\n" + "Smer: Informacioni sistemi i tehnologije";
-		JOptionPane.showMessageDialog(menjacnicaGUI.getContentPane(), poruka, "Podaci o autoru", 1);
+		JOptionPane.showMessageDialog(menjacnicaGUI.getContentPane(), poruka, "Podaci o autoru", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 	public static void napraviIzvrsiZamenu(){

@@ -32,6 +32,8 @@ import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.Cursor;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class MenjacnicaGUI extends JFrame {
 
@@ -65,8 +67,14 @@ public class MenjacnicaGUI extends JFrame {
 	 * Create the frame.
 	 */
 	public MenjacnicaGUI() {
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent arg0) {
+				GUIKontroler.ugasiAplikaciju();
+			}
+		});
 		setTitle("Menjacnica");
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 589, 318);
 		setJMenuBar(getMenuBar_1());
 		contentPane = new JPanel();
@@ -302,6 +310,11 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenu getMnIzvrsiZamenu() {
 		if (mnIzvrsiZamenu == null) {
 			mnIzvrsiZamenu = new JMenu("Izvrsi zamenu");
+			mnIzvrsiZamenu.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					GUIKontroler.napraviIzvrsiZamenu();
+				}
+			});
 		}
 		return mnIzvrsiZamenu;
 	}
