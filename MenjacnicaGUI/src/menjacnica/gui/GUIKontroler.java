@@ -18,6 +18,7 @@ import menjacnica.gui.MenjacnicaGUI;
 					try {
 						menjacnicaGUI = new MenjacnicaGUI();
 						menjacnicaGUI.setVisible(true);
+						menjacnicaGUI.setLocationRelativeTo(null);
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
@@ -54,6 +55,7 @@ import menjacnica.gui.MenjacnicaGUI;
 	public static void napraviDodajKurs(){
 		DodajKursGUI kurs = new DodajKursGUI();
 		kurs.setVisible(true);
+		kurs.setLocationRelativeTo(null);
 	}
 	
 	public static void ispisi(String poruka){
@@ -63,6 +65,7 @@ import menjacnica.gui.MenjacnicaGUI;
 	public static void napraviObrisiKurs(){
 		ObrisiKursGUI obrisi = new ObrisiKursGUI();
 		obrisi.setVisible(true);
+		obrisi.setLocationRelativeTo(null);
 	}
 	
 	public static void podaciOAutoru(){
@@ -73,5 +76,6 @@ import menjacnica.gui.MenjacnicaGUI;
 	public static void napraviIzvrsiZamenu(){
 		IzvrsiZamenuGUI zamena = new IzvrsiZamenuGUI();
 		zamena.setVisible(true);
+		zamena.setLocationRelativeTo(null);
 	}
 	}
